@@ -15,10 +15,11 @@
   .select-list ol.list-group,
   &.select-list ol.list-group {
 
-    background-color: @inset-panel-background-color;
+    background-color: rgba(249, 249, 249, 1.0);
 
     li {
-      padding: @component-padding;
+      padding: 1px @component-padding;
+      font-size: 11px;
       border-top: 1px solid @inset-panel-border-color;
       border-left: 1px solid @inset-panel-border-color;
       border-right: 1px solid @inset-panel-border-color;
@@ -27,7 +28,7 @@
       &.two-lines { padding: @component-padding/2 @component-padding; }
       &.selected {
         color: @text-color;
-        background-color: @background-color-highlight;
+        background-color: rgba(225, 225, 225, 1.0);
       }
 
       .status.icon {

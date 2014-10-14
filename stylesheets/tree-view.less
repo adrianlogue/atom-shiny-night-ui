@@ -1,32 +1,109 @@
 @import "ui-variables";
 
-.tree-view {
-	font-size: @font-size;
-	background: @tree-view-background-color;
+// Remove horizontal scrolling
+.tree-view-resizer {
+    width: auto!important;
 
-	.selected:before {
-		background: #C1C1C1;
-	}
+    &.tool-panel.panel-left {
+        border-right: 1px solid #ddd;
+    }
+
+    .tree-view-scroller {
+        overflow-x: hidden;
+    }
+
+    .tree-view-resize-handle {
+        cursor: default;
+    }
 }
 
-.focusable-panel {
-	opacity: 1;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#e8ecf1), to(#ebebeb));
-	background-image: -webkit-linear-gradient(top, #e8ecf1, #ebebeb);
+.tree-view,
+.tree-view:focus {
+    transition: all .2s ease;
+    font-size: @font-size;
+    padding: 10px 20px 10px 15px;
+    border-right: none;
+    background: @base-background-color;
 
-	&:focus {
-		background-image: -webkit-gradient(linear, left top, left bottom, from(#e8ecf1),to(#d1d8e0));
-		background-image: -webkit-linear-gradient(top, #e8ecf1, #d1d8e0);
+    // TODO: Take into account git statuses such as .status-modified etc...
+    .list-item,
+    .list-item > span {
+        color: @text-color;
+        &:before {
+            color: @tree-view-icon-color;
+        }
 
-		.selected:before {
-			background: @background-color-selected;
-		}
+    }
 
-		.selected > .name,
-		.selected > .name:before,
-		.selected > .list-item > .name,
-		.selected > .list-item > .name:before {
-			color: #fff !important;
-		}
-	}
+    .status-added {
+        > .list-item,
+        > .list-item > span,
+        > span {
+            color: @text-color-added;
+            &:before {
+                color: @text-color-added;
+            }
+        }
+    }
+
+    .status-renamed {
+        > .list-item,
+        > .list-item > span,
+        > span {
+            color: @text-color-renamed;
+            &:before {
+                color: @text-color-renamed;
+            }
+        }
+    }
+
+    .status-removed {
+        > .list-item,
+        > .list-item > span,
+        > span {
+            color: @text-color-removed;
+            &:before {
+                color: @text-color-removed;
+            }
+        }
+    }
+
+    .status-modified {
+        > .list-item,
+        > .list-item > span,
+        > span {
+            color: @text-color-modified;
+            &:before {
+                color: @text-color-modified;
+            }
+        }
+    }
+
+    .status-ignored {
+        > .list-item,
+        > .list-item > span,
+        > span {
+            color: @text-color-ignored;
+            &:before {
+                color: @tree-view-icon-color-ignored;
+            }
+        }
+    }
+
+    .selected {
+        > .list-item,
+        > .list-item > span,
+        > span {
+            color: #fff;
+            &:before {
+                color: #fff;
+            }
+        }
+        &:before {
+            left: 10px;
+            right: 15px;
+            border-radius: @component-border-radius;
+        }
+    }
+
 }

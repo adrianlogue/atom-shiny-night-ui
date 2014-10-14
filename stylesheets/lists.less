@@ -6,6 +6,7 @@
   li:not(.list-nested-item),
   li.list-nested-item > .list-item {
     .text(normal);
+    color: #000;
   }
 
   .generate-list-item-text-color(@class) {
@@ -52,7 +53,7 @@
   // We want to highlight the background of the list items because we dont
   // know their size.
   li.selected {
-    background-color: @background-color-selected;
+    background-color: linear-gradient(rgba(83, 170, 231, 1.0), rgba(51, 142, 218, 1.0)) !important;
     &:before{ display: none; }
   }
 

@@ -10,10 +10,10 @@
 @text-color-warning: #ff982d;
 @text-color-error: #c00;
 
-@text-color-ignored: @text-color-subtle;
+@text-color-ignored: #bbb;
 @text-color-added: @text-color-success;
-@text-color-renamed: @text-color-info;
-@text-color-modified: @text-color-warning;
+@text-color-renamed: rgba(71, 86, 101, 1.0);
+@text-color-modified: darken(rgba(233, 138, 56, 1.0), 8);
 @text-color-removed: @text-color-error;
 
 @background-color-info: #0098ff;
@@ -21,17 +21,17 @@
 @background-color-warning: #ff4800;
 @background-color-error: #c00;
 @background-color-highlight: rgba(0, 0, 0, .1);
-@background-color-selected: #6aa5e9;
+@background-color-selected: #51B9DB;
 
 @app-background-color: #ccc;
 
-@base-background-color: #f4f4f4;
+@base-background-color: #fff;
 @base-border-color: #9f9f9f;
 
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: @base-border-color;
 
-@input-background-color: white;
+@input-background-color: #fff;
 @input-border-color: fadeout(@base-border-color, 10%);
 
 @tool-panel-background-color: @base-background-color;
@@ -57,8 +57,10 @@
 @tab-background-color-active: #f0f0f0;
 @tab-border-color: lighten(@base-border-color, 10%);
 
-@tree-view-background-color: #eee;
+@tree-view-background-color: rgba(217, 224, 231, 1.0);
 @tree-view-border-color: @base-border-color;
+@tree-view-icon-color: #9DA6AF;
+@tree-view-icon-color-ignored: #BEC4CC;
 
 @ui-site-color-1: @background-color-success; // green
 @ui-site-color-2: @background-color-info; // blue
@@ -69,19 +71,18 @@
 
 // Sizes
 
-@font-size: 11px;
-@input-font-size: 14px;
+@font-size: 13px;
 @disclosure-arrow-size: 12px;
 
 @component-padding: 10px;
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
-@component-border-radius: 2px;
+@component-border-radius: 4px;
 
 @tab-height: 26px;
 
 
 // Other
 
-@font-family: 'Lucida Grande', 'Segoe UI', sans-serif;
+@font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
