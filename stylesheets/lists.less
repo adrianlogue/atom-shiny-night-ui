@@ -3,8 +3,11 @@
 @import "octicon-mixins";
 
 .overlay.select-list {
-    ol.list-group {
-        li {
+    ol.list-group,
+    ul.list-group,
+    .list-tree {
+        li,
+        > li.list-item {
             font-size: @font-size !important;
             color: @text-color !important;
 
@@ -14,6 +17,10 @@
 
                 &:before {
                     display: none;
+                }
+
+                span {
+                    color: #fff !important;
                 }
 
                 .status.icon {
@@ -50,6 +57,10 @@
                 background-color: @background-color-selected !important;
                 color: #fff !important;
                 border-radius: @component-border-radius;
+
+                :before {
+                    display: none;
+                }
             }
         }
     }
