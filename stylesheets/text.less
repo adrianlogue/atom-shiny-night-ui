@@ -62,7 +62,7 @@ code {
   text-shadow: none;
   background-color: @background-color-highlight;
   border-radius: @component-border-radius;
-  padding: 1px 3px;
+  padding: 2px 5px;
 }
 
 .highlight-color(@name, @color) {
@@ -71,8 +71,8 @@ code {
     font-weight: bold;
     text-shadow: none;
     background-color: @color;
-    border-radius: @component-border-radius;
-    padding: 1px 3px;
+    border-radius: @component-border-radius - 1px;
+    padding: 2px 5px;
   }
 }
 .highlight-color(info, @background-color-info);
