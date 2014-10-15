@@ -1,8 +1,8 @@
 {
   "name": "shiny-ui",
   "theme": "ui",
-  "version": "0.10.0",
-  "description": "Flat, light theme for interface components",
+  "version": "0.0.0",
+  "description": "Similar to Soda Light but with everything flattened, lightened, embiggened and Helvetica-ized",
   "repository": "https://github.com/adrianlogue/atom-shiny-ui.git",
   "license": "MIT",
   "engines": {
