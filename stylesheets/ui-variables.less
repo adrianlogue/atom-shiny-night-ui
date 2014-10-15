@@ -7,21 +7,21 @@
 
 @text-color-info: #5293d8;
 @text-color-success: #32bf32; // green
-@text-color-warning: #ff9a27;
-@text-color-error: #EE521A;
+@text-color-warning: #ff9a27; // orange
+@text-color-error: #EE521A; // red
 
 @text-color-ignored: #bbb;
 @text-color-added: @text-color-success;
-@text-color-renamed: @text-color-warning; //#FFCA27; // yellow
+@text-color-renamed: @text-color-warning;
 @text-color-modified: #CD8B4F; // brown
 @text-color-removed: @text-color-error;
 
-@background-color-info: #FDFDC4;
-@background-color-success: #17ca65;
-@background-color-warning: #ff4800;
-@background-color-error: #c00;
-@background-color-highlight: rgba(0, 0, 0, .1);
-@background-color-selected: #51B9DB;
+@background-color-info: #FDFDC4; // light yellow
+@background-color-success: @text-color-success;
+@background-color-warning: @text-color-warning;
+@background-color-error: @text-color-error;
+@background-color-highlight: #ddd;
+@background-color-selected: #51B9DB; // blue
 
 @app-background-color: #fff;
 
@@ -53,11 +53,11 @@
 
 @tab-bar-background-color: @base-background-color;
 @tab-bar-border-color: @base-border-color;
-@tab-background-color: #e8e8e8;
+@tab-background-color: #efefef;
 @tab-background-color-active: @base-background-color;
 @tab-border-color: @base-border-color;
 
-@tree-view-background-color: rgba(217, 224, 231, 1.0);
+@tree-view-background-color: @base-background-color;
 @tree-view-border-color: @base-border-color;
 @tree-view-icon-color: #9DA6AF;
 @tree-view-icon-color-ignored: #BEC4CC;
