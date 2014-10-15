@@ -65,17 +65,17 @@ code {
   padding: 2px 5px;
 }
 
-.highlight-color(@name, @color) {
+.highlight-color(@name, @color, @background-color) {
   .highlight-@{name} {
-    color: @text-color-highlight;
+    color: @color;
     font-weight: bold;
     text-shadow: none;
-    background-color: @color;
+    background-color: @background-color;
     border-radius: @component-border-radius - 1px;
     padding: 2px 5px;
   }
 }
-.highlight-color(info, @background-color-info);
-.highlight-color(warning, @background-color-warning);
-.highlight-color(error, @background-color-error);
-.highlight-color(success, @background-color-success);
+.highlight-color(info, @text-color-info, @background-color-info);
+.highlight-color(warning, #fff, @background-color-warning);
+.highlight-color(error, #fff, @background-color-error);
+.highlight-color(success, #fff, @background-color-success);
