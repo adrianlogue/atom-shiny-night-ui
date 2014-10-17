@@ -88,6 +88,9 @@
 
         .title{
             -webkit-transform: skewX(-@tab-skew);
+            &:before {
+                color: @text-color-subtle;
+            }
         }
 
         &.active {
@@ -124,8 +127,12 @@
                 }
             }
 
+            .title {
+                &:before {
+                    color: @text-color;
+                }
+            }
         }
-
     }
 
     .placeholder {
