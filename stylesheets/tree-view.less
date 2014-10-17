@@ -93,14 +93,16 @@
         > .list-item,
         > .list-item > span,
         > span {
+            background-color: transparent;
             color: #fff;
             &:before {
                 color: #fff;
             }
         }
         &:before {
-            left: 10px;
-            right: 15px;
+            display: block !important;
+            left: 5px;
+            right: 5px;
             border-radius: @component-border-radius;
         }
     }

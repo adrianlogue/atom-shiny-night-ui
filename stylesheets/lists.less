@@ -9,28 +9,30 @@
     > li.list-item {
         font-size: @font-size;
         color: @text-color;
+        padding: 0px 8px;
 
-        &.selected {
+        &.selected:not(.list-nested-item) {
             color: #fff;
             background-color: @background-color-selected;
+            border-radius: @component-border-radius;
 
             &:before {
                 display: none;
             }
 
-            span:not(.highlight-info) {
+            > span:not(.highlight-info) {
                 color: #fff;
             }
 
-            .status.icon {
+            > .status.icon {
                 color: #fff;
             }
 
-            .secondary-line {
+            > .secondary-line {
                 color: #fff;
             }
 
-            .key-binding {
+            > .key-binding {
                 color: @text-color;
             }
         }
@@ -50,6 +52,10 @@
         li {
             padding: 0px 8px;
             margin-right: @component-padding/2;
+            border-radius: @component-border-radius;
+            &.selected:before {
+                display:none;
+            }
         }
     }
 }
