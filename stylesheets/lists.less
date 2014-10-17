@@ -2,66 +2,54 @@
 @import "ui-mixins";
 @import "octicon-mixins";
 
-.overlay.select-list {
-    ol.list-group,
-    ul.list-group,
-    .list-tree {
-        li,
-        > li.list-item {
-            font-size: @font-size !important;
-            color: @text-color !important;
+.list-group,
+.list-tree,
+.select-list {
+    > li,
+    > li.list-item {
+        font-size: @font-size;
+        color: @text-color;
 
-            &.selected {
-                color: #fff !important;
-                background-color: @background-color-selected !important;
+        &.selected {
+            color: #fff;
+            background-color: @background-color-selected;
 
-                &:before {
-                    display: none;
-                }
+            &:before {
+                display: none;
+            }
 
-                span {
-                    color: #fff !important;
-                }
+            span:not(.highlight-info) {
+                color: #fff;
+            }
 
-                .status.icon {
-                    color: #fff !important;
-                }
-
-                .secondary-line {
-                    color: #fff !important;
-                }
-
-                .key-binding {
-                    color: @text-color;
-                }
+            .status.icon {
+                color: #fff;
             }
 
             .secondary-line {
-                color: lighten(@text-color-subtle, 10%);
+                color: #fff;
+            }
+
+            .key-binding {
+                color: @text-color;
             }
         }
+
+        .secondary-line {
+            color: lighten(@text-color-subtle, 10%);
+
+        }
     }
-}
 
-.popover-list.select-list {
-    background-color: @overlay-background-color;
-    box-shadow: 0 0 10px @base-border-color;
-    padding: @component-padding/2 !important;
-    border-radius: @component-border-radius;
-    border: 1px solid @overlay-border-color;
-
-    ol.list-group {
+    &.popover-list {
+        background-color: @overlay-background-color;
+        box-shadow: 0 0 10px @base-border-color;
+        padding: @component-padding @component-padding/2 0px @component-padding !important;
+        border-radius: @component-border-radius;
+        border: 1px solid @overlay-border-color;
         li {
             padding: 0px 8px;
-            &.selected {
-                background-color: @background-color-selected !important;
-                color: #fff !important;
-                border-radius: @component-border-radius;
-
-                :before {
-                    display: none;
-                }
-            }
+            margin-right: @component-padding/2;
         }
     }
 }
