@@ -3,38 +3,42 @@
 .overlay {
     color: @text-color;
     background-color: @overlay-background-color;
-    padding: @component-padding;
-    border: 1px solid @overlay-border-color;
-    box-shadow: 0 0 10px @base-border-color;
+    padding: 0px;
+    border: none;
+    box-shadow: 0 5px 40px darken(@base-border-color, 20%);
     border-radius: @component-border-radius;
 
+    > div {
+        padding: @component-padding;
+    }
+
     .editor.mini {
-        margin-bottom: @component-padding;
+        margin: @component-padding;
+        padding: @component-padding/2;
+        height: @component-line-height + @component-padding;
+        max-height: @component-line-height + @component-padding;
     }
 
     .select-list ol.list-group,
     &.select-list ol.list-group {
 
         background-color: @base-background-color;
-
+        
         li {
-            padding: 1px @component-padding;
+            padding: @component-padding/2 @component-padding;
             font-size: @font-size;
             border-top: 1px solid @inset-panel-border-color;
-            border-left: 1px solid @inset-panel-border-color;
-            border-right: 1px solid @inset-panel-border-color;
+
             &:last-child {
                 border-bottom: 1px solid @inset-panel-border-color;
             }
 
+            &.selected {
+                border-radius: 0px;
+            }
             &.two-lines {
                 padding: @component-padding/2 @component-padding;
             }
-
-            // &.selected {
-            //     color: #fff;
-            //     background-color: @background-color-selected;
-            // }
 
             .status.icon {
                 float: right;
