@@ -1,5 +1,17 @@
 @import "ui-variables";
 
+.overlay:not(.select-list) {
+    padding: @component-padding;
+
+    .editor.mini {
+        margin: @component-padding 0px;
+    }
+
+    > div {
+        padding: @component-padding;
+    }
+}
+
 .overlay {
     color: @text-color;
     background-color: @overlay-background-color;
@@ -7,10 +19,6 @@
     border: none;
     box-shadow: 0 5px 40px darken(@base-border-color, 20%);
     border-radius: @component-border-radius;
-
-    > div {
-        padding: @component-padding;
-    }
 
     .editor.mini {
         margin: @component-padding;
@@ -23,7 +31,7 @@
     &.select-list ol.list-group {
 
         background-color: @base-background-color;
-        
+
         li {
             padding: @component-padding/2 @component-padding;
             font-size: @font-size;
@@ -49,5 +57,10 @@
             }
         }
 
+    }
+
+    .error-message,
+    .loading-message {
+        padding: @component-padding;
     }
 }
