@@ -2,7 +2,8 @@
 
 // Remove horizontal scrolling
 .tree-view-resizer {
-    width: auto !important;
+    cursor: col-resize;
+    // width: auto !important;
 
     &.tool-panel.panel-left {
         border-right: 1px solid #ddd;
@@ -10,10 +11,6 @@
 
     .tree-view-scroller {
         overflow-x: hidden;
-    }
-
-    .tree-view-resize-handle {
-        cursor: default;
     }
 }
 
