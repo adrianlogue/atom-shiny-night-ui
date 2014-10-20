@@ -18,7 +18,7 @@ In the initial releases of Shiny UI, I set it up so that the Tree View pane auto
 
 If (like me) you prefer the old auto-resizing and lack of horizontal scrolling in the Tree View then you can re-enable it by putting the following into your styles.less:
 
-```css
+```less
 .tree-view-resizer {
     width: auto !important;
 
@@ -32,13 +32,15 @@ This should work in most UI Themes by the way.
 
 Furthermore to re-instate the rounded corners and padding around the selected items in the Tree View, add this to your styles.less:
 
-```css
+```less
+@import "ui-variables";
+
 .tree-view,
 .tree-view:focus {
     .selected:before {
         display: block !important;
-        left: 5px;
-        right: 5px;
+        left: 6px;
+        right: 8px;
         border-radius: @component-border-radius;
     }
 }
