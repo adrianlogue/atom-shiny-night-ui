@@ -1,9 +1,9 @@
 {
-  "name": "shiny-ui",
+  "name": "shiny-night-ui",
   "theme": "ui",
   "version": "0.33.0",
-  "description": "Updated for Yosemite! Shiny UI is a bright, fresh theme. All elements are slightly flattened, lightened, embiggened and Helvetica-ized.",
-  "repository": "https://github.com/adrianlogue/atom-shiny-ui.git",
+  "description": "The dark variant on the Shiny UI theme for Atom",
+  "repository": "https://github.com/adrianlogue/atom-shiny-night-ui.git",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
